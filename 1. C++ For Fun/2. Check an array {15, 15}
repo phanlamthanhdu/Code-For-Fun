@@ -1,0 +1,33 @@
+/* Write a C++ program to check a given array (length will be atleast 2) of integers and return true if there are two values 15, 15 next to each other.
+Sample Input:
+{ 5, 5, 1, 15, 15 }
+{ 15, 2, 3, 4, 15 }
+{ 3, 3, 15, 15, 5, 5}
+{ 1, 5, 15, 7, 8, 15}
+Sample Output:
+1
+0
+1
+0
+*/
+#include <iostream>
+using namespace std;
+bool test(int nums[], int length){
+    for(int i = 0; i < length; ++i){
+        int j = i;
+        if (nums[j] == nums[++j] && nums[j] == 15){
+            return true;
+        } 
+     }    return false;
+}
+    
+
+int main(){
+    int nums1[] {15, 15, 15, 15, 15};
+    cout << boolalpha;
+    cout << "The answer is " << test(nums1, size(nums1)) << endl;
+     
+    int nums2[] {1, 5, 15, 7, 8, 15};
+    cout << "The answer is " << test(nums2, size(nums2)) << endl;    
+    return 0;
+}
