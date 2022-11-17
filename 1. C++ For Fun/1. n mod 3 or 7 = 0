@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+bool test(int n)
+        {
+            return n % 3 == 0 || n % 7 == 0;
+        }
+        
+
+int main(){
+    int x;
+    cout << "Input : ";
+    cin >> x;
+    cout << boolalpha << "Output : " << test(x);
+    
+    return 0;
+}
