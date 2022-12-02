@@ -1,0 +1,31 @@
+//Write a program that allows user inputting a simple expression containing one of four operators +, -, *, / then the result is printed out to the monitor. 
+//Input format:  num1 operator num2,
+//An example of user interface
+//Enter an expression (+ - * /): 4*5 
+//Result: 20
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    double number1, number2;
+    char op;
+    double result;
+    cout << "Input fomat (number1 operator number2) : ";
+    cin >> number1 >> op >> number2; 
+    cout << endl;
+    switch (op){
+        case '+' : result = number1 + number2;
+        break;
+        case '-' : result = number1 - number2;
+        break;
+        case '*' : result = number1 * number2;
+        break;
+        case '/' : result = number1 / number2;
+        break;
+        default  : cout << "This "<< op <<" is not supported";
+        return 0;
+    }
+        cout << "Output : " << result;
+        return 0;
+}
