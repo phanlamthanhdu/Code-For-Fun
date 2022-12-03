@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    int x;
+
+    cout << "Output : ";
+    cin >> x;
+    int a = x,b{-1};
+
+
+
+    for(int i = 1; i <= 2*x; i++){
+        if(i <= x){
+
+            //Draw upside-down right triangle with " "
+            a--;                            
+            for(int j = a; j > 0; j--)      
+            {
+                cout << " ";
+            }
+            
+            //Draw hollow isosceles triangle with "*"
+            b += 2;
+            for(int k = b; k > 0; k--)      
+            {
+                if(k == 1 || k == b)
+                {
+                    cout << "*";
+                }else
+                {
+                    cout << " ";
+                }
+            }
+            
+            cout << endl; 
+        }else
+        {   
+            //Draw right triangle with " "
+            a++;
+            for(int j = a; j >= 1; j--)
+            {
+                cout << " ";
+            }
+            
+            //Draw upside-down hollow isosceles triangle with "*"
+            b -= 2;
+            for(int k = b; k >= 1; k--)
+            {
+                if(k == 1 || k == b)
+                {
+                    cout << "*";
+                }else
+                {
+                    cout << " ";
+                }
+            } 
+            
+            cout << endl; 
+        }    
+    }
+
+
+    return 0;
+}
