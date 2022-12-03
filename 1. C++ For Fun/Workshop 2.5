@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+int main(){
+    
+    int i{0},a,b,c;
+    char ch[500];
+    cout << "Output : ";
+    cin.getline(ch,499);    //Input
+    
+    while( ch[i] != '\0' ){
+
+        ch[i] = toupper(ch[i]); //Uppercase
+
+        if(ch[i] >= 'A' && ch[i] <= 'Z'){
+            switch( ch[i] ){
+                case 'A' : a++; break;
+                case 'E' : a++; break;
+                case 'I' : a++; break;
+                case 'O' : a++; break;
+                case 'U' : a++; break;
+                default : b++;          
+            }            
+        }else{
+            c++;
+        }
+        i++;
+    }
+
+
+    //Output
+    cout << "The number of vowels is " << a << endl;
+    cout << "The number of consonants is " << b << endl;
+    cout << "The number of others is " << c << endl;
+    return 0;
+}
