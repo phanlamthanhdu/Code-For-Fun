@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+
+int main()
+{   
+    int S{0}, k, n, max{0};
+
+    cin >> n;
+    
+    for(k = 1; k <= n; k++)
+    {
+            S += k;
+            if(S < n)
+            {
+                max = k;
+            }
+    }
+    if(max == 0) cout << "Not k exist for S(k) < n";
+    else cout << max;
+    return 0;
+}
