@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  int n, i{1};
+  long double S{0}, sum{0};
+
+  cin >> n;
+
+  for(i; i <= n; i++)
+  { 
+    sum += i;
+    S += (1/sum);
+  }
+  cout << setprecision(19) << S;
+  return 0;
+}
