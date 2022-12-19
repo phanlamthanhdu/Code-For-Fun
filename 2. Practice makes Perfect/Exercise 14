@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n, x, i{0},j;
+  long long S{0}, T{1};
+
+  cin >> x >> n;
+
+  for(i; i <= n; i++)
+  { 
+    j = 2*i + 1;
+    T = 1;
+    while(j >= 1)
+    { 
+      T *= x;
+      --j;
+    }
+    S += T;
+  }
+  cout << S;
+  return 0;
+}
