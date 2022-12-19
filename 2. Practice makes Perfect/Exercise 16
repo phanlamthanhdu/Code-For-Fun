@@ -1,0 +1,22 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+  int n, x, i{1};
+  long long T{1}, sum{0};
+  double S{0};
+
+  cin >> n >> x;
+
+  for(i; i <= n; i++)
+  { 
+    T = pow(x, i);
+    sum = sum + i;
+    S += ((double)T/sum);
+  }
+  cout << setprecision(16) << S;
+  return 0;
+}
