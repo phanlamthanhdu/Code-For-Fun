@@ -1,3 +1,5 @@
+14. Tính S(n) = x + x^3 + x^5 … + x^2n+1.
+
 #include <iostream>
 using namespace std;
 
