@@ -1,0 +1,30 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+  int n, x, i{0}, j;
+  long long T{1}, GT{1};
+  double S{0};
+
+  cin >> n >> x;
+
+  for(i; i <= n; i++)
+  { 
+    j = 2*i;
+    T = 1;
+    GT = 1;
+    while(j >= 1)
+    {
+      T *= x;
+      GT *= j;
+      --j;
+    }
+
+    S += ((double)T/GT);
+  }
+  cout << setprecision(16) << S;
+  return 0;
+}
