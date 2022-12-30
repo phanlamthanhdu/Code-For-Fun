@@ -1,0 +1,33 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  //char *player[100];
+  //cin.getline(*player, 100);
+  //cout << sizeof(*player);
+  
+  const char *player{"Hello Everyone"};
+  char player2[255];
+  cin.getline(player2, 255);
+
+  cout << player2;
+  cout << *player; //H
+  cout << player;  //Hello Everyone
+  
+
+  //char *player1 = "Hi";      ***********ERROE*********
+  //int *player2{new int};
+  //cin >> *player2;
+  //cin.ignore();
+  //string *player1{new string};
+  //getline(cin,*player1);
+
+  //cout << *player;
+  //cout << sizeof(*player1);
+  //cout << sizeof(*player2);
+  return 0;
+}
