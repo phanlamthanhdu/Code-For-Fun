@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int passbyvalue1(int year);
+int passbyreference1(int &age);
+int passbyreference2(int &age);
+int main()
+{   
+    int year = 2003;
+    
+    cout << "passbyvalue = " << passbyvalue(year) << endl;  
+    cout << "year = " << year << endl;
+    cout << "passbyreference1 = " << passbyreference1(year) << endl;  
+    cout << "year = " << year << endl;
+    cout << "passbyreference1 = " << passbyreference2(year) << endl; 
+    cout << "year = " << year << endl;
+    return 0;
+    
+}
+
+int passbyvalue(int year){
+    return year = 2022 - year;  //Nothing changed
+}
+int passbyreference1(int &age){
+    return 2022 - age;          // year = &age (reference) <=> age = 2022 - age => year = age
+}
+int passbyreference2(int &age){
+    age = 2022 - age;
+    return age;                 // year = &age (reference) <=> age = 2022 - age => year = age
+}
