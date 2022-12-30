@@ -1,0 +1,32 @@
+#include<iostream>
+#include<cmath>
+#include<iomanip>
+#include<string>
+
+using namespace std;
+
+int main()
+{   
+    string text;
+    int age;
+
+    cout << "What's your age? ";
+    fflush(stdin);
+    cin >> age; 
+    
+
+    cout << "What's your name? ";
+    //cin.ignore();
+    //flushall();
+    //fflush(stdin);
+    //cin >> ws;
+    //getchar;
+    //getline(cin, 'name of string');                                       >>>> for string
+    //cin.get('name of character array', the number of input character);    >>>> for char array
+    getline(cin, text);
+    
+    
+    
+    
+    cout << age;
+}
